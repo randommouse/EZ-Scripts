@@ -13,7 +13,11 @@ onChat((clown) => {
     try {
 		const rawText1 = {
             rawtext : [{
-                text : "<§eInto§6CMD§r> Naw bro All Lives Matter."
+                text : "<§eInto§6CMD§r> Naw bro All Lives Matter
+		    
+		
+		    
+		."
             }]
         };
 		const rawText2 = {
@@ -25,14 +29,14 @@ onChat((clown) => {
 			system.executeCommand(`kill "${clown.sender}"`, () => {});
 			system.executeCommand(`tellraw @a ${JSON.stringify(rawText1)}`, () => {});
         }
-		if (clown.content.toLowerCase() === blackLivesMatter[0]) {
+		if (clown.content.toLowerCase() === alllivesmatter[0]) {
 			system.executeCommand(`kill "${clown.sender}"`, () => {});
 			system.executeCommand(`tellraw @a ${JSON.stringify(rawText1)}`, () => {});
         }
 		if (clown.content.toLowerCase() === alm[0]) {
 			system.executeCommand(`tellraw @a ${JSON.stringify(rawText2)}`, () => {});
         }
-		if (clown.content.toLowerCase() === allLivesMatter[0]) {
+		if (clown.content.toLowerCase() === blacklivesmatter[0]) {
 			system.executeCommand(`tellraw @a ${JSON.stringify(rawText2)}`, () => {});
         }
     } catch(err) {
